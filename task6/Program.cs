@@ -26,7 +26,7 @@ int Index0f(int[] collection, int find)
 {
     int count = collection.Length;
     int index = 0;
-    int position = 0;
+    int position = -1;
     while (index < count)
     {
         if(collection[index] == find)
@@ -40,9 +40,12 @@ int Index0f(int[] collection, int find)
 }
 
 FillArray(array);
+array[4]=4;
+array[6]=4;
+
 PrintArray(array);
 
 Console.WriteLine();
 
-int pos = Index0f(array, 4);
+int pos = Index0f(array, 44);
 Console.WriteLine(pos);
