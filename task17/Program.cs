@@ -2,12 +2,12 @@
 на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 
 и выдаёт номер четверти плоскости, в которой находится эта точка.
 */
-int getQuoterFromCoordinate(int x, int y);
+int getQuoterFromCoordinate(int x, int y)
 {
     int resault =0;
     if(x > 0 && y >0)
     {
-        resault = 0;
+        resault = 1;
     }
     else if(x < 0 && y > 0)
     {
@@ -36,3 +36,5 @@ Console.WriteLine("Введите Х: ");
 userX = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите Y: ");
 userY = Convert.ToInt32(Console.ReadLine());
+int answer = getQuoterFromCoordinate(userX,userY);
+Console.WriteLine($"Значения: {answer} ");
